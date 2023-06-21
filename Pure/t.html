@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .bar {
+            list-style: none;
+        }
+
+        .bar>li {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .bar>li:before {
+            content: '\25CF';
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .bar>li:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            border-left: 2px solid black;
+            margin-left: 5px;
+            height: 100%;
+        }
+
+        .bar>li:first-of-type:after {
+            top: 50%;
+        }
+
+        .bar>li:last-of-type:after {
+            top: -50%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="bar">
+        <li>element 1</li>
+        <li>element 2</li>
+        <li>element 3</li>
+        <li>element 4</li>
+        <li>element 5</li>
+    </ul>
+
+</body>
+
+</html>

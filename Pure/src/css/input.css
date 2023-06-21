@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vertical-text{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.line-linkage {
+    width: 92%;
+    height: 0px;
+    border: 1px solid #000;
+    position: relative;
+    top: -58px;
+    left: 52%;
+    z-index: -1000;
+}
+
+.hidden {
+    visibility: hidden;
+}

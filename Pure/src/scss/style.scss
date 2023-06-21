@@ -1,0 +1,232 @@
+$white: #f8fafc;
+$grey:  #71717a;
+$gray: #18181b;
+$primary: #f59e0b;
+$font: monospace;
+$transition-time: .2s ease-in-out;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+}
+
+p {
+    color: #3f3f46;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    font-family: $font;
+    background-color: $white;
+    z-index: 50;
+    color: $gray;
+    font-size: 1rem;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        color: $gray;
+        max-width: 92%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .nav-link {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: $transition-time;
+
+            &:hover {
+                transform: translate(3px, -2px);
+                color: $primary;
+            }
+            span {
+                color: $primary;
+            }
+
+            &.button {
+                color: $primary;
+                &:hover {
+                    color: $white;
+                }
+            }
+            
+        }
+    }
+}
+
+.button {
+    border: 1px $primary solid;
+    border-radius: 5px;
+    color: $primary;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    font-family: $font;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+.contact-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 4rem;
+}
+
+.email-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 4rem;
+}
+
+.contact-fixed,
+.email-fixed {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &::after {
+            content: "";
+            width: 2px;
+            background-color: $gray;
+            height: 5rem;
+            margin: 0 auto;
+        }
+
+        li {
+            a {
+                text-decoration: none;
+                color: inherit;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                transition: $transition-time;
+
+                i {
+                    font-size: 1.5rem;
+                    color: $gray;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 100vh;
+    width: 85%;
+    margin: 0 auto;
+
+    h1, h2, p {
+        margin: 0;
+    }
+
+    .greeting {
+        font-weight: normal;
+        font-family: $font;
+        font-size: 1.5rem;
+        color: $primary;
+    }
+
+    .name {
+        font-size: 3rem;
+        font-family: sans-serif;
+        color: $gray;
+    }
+
+    .motto {
+        font-size: 2.5rem;
+        font-family: sans-serif;
+        color: $grey;
+    }
+
+    .description {
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: x-large;
+    }
+
+    &#tentang {
+        display: flex;
+        
+        .full-description {
+            width: 66.66%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 16px;
+
+            h1 {
+                font-family: $font;
+                font-size: xx-large;
+                position: relative;
+                font-weight: normal;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    margin-left: 2px;
+                    top: 50%;
+                    width: 66.66%;
+                    background-color: $primary;
+                    height: 1px;
+                }
+
+                span {
+                    color: $primary;
+                }
+                // font-mono text-3xl relative after:absolute after:ml-2 after:top-1/2 after:w-2/3 after:bg-amber-500 after:h-[1px]
+            }
+
+            p {
+                color: $grey;
+            }
+        }
+        
+        .profile {
+            width: 33.33%;
+            img {
+                background-color: #18181b;
+                width: 20rem;
+                height: 20rem;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+    }
+}
