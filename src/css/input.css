@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.vertical-text{
+.vertical-text {
     writing-mode: vertical-rl;
     text-orientation: mixed;
 }
@@ -19,4 +19,14 @@
 
 .hidden {
     visibility: hidden;
+}
+
+#projects img {
+    filter: sepia(50%);
+    transition: 0.1s ease-in-out;
+}
+
+#projects a:hover > img {
+    cursor: pointer;
+    filter: sepia(0%);
 }
